@@ -1,0 +1,23 @@
+{
+  "name": "repositoryperstudio2018",
+  "version": "1.0.0",
+  "description": "prova per studio di esame",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dema96/repositoryperstudio2018.git"
+  },
+  "author": "Federico De Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dema96/repositoryperstudio2018/issues"
+  },
+  "homepage": "https://github.com/dema96/repositoryperstudio2018#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
