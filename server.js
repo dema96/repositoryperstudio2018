@@ -24,7 +24,7 @@ router.get('/', function (req, res) {
     if(value == -1){
       res.send({
         "Code": 400,
-        "Message": "Valori negativi"
+        "Message": "parametri sbagliati"
       });
     }else if (value == -2) {
       res.send({
