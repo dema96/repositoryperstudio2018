@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var area = require('./area');
 
 var app = express();
 var port = process.env.PORT || 8080
@@ -17,7 +18,26 @@ app.use(function (req, res, next) {
 var router = express.Router();
 
 router.get('/', function (req, res) {
-    res.send('Benvenuto nel modulo rest per ing');
+    var side1 = req.query.side1;
+    var side2 = req.query.side2;
+    var value = area.getArea(lati = [side1, side2]);
+    if(value == -1){
+      res.send({
+        "Code": 400,
+        "Message": "Valori negativi"
+      });
+    }else if (value == -2) {
+      res.send({
+        "Code": 400,
+        "Message": "parametri sbagliati"
+      });
+    }else{
+      res.send({
+        "code": 200,
+        "Risultato:":value,
+
+      });
+    }
 });
 
 app.use('/', router);
